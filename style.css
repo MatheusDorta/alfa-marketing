@@ -74,11 +74,12 @@ body {
     box-shadow: 0 10px 20px -5px rgba(34, 197, 94, 0.4);
 }
 
-/* Swiper Carousel Styles */
+/* Swiper Carousel Styles -- CORRIGIDO */
 .media-carousel {
     width: 100%;
-    aspect-ratio: 16 / 9; /* Mantém proporção de vídeo */
+    height: 450px; /* Altura fixa para consistência */
     position: relative;
+    background-color: #111827;
 }
 
 .swiper-slide {
@@ -89,7 +90,17 @@ body {
     align-items: center;
     color: white;
     font-size: 24px;
+    overflow: hidden; /* Garante que a imagem não vaze */
 }
+
+/* A MÁGICA ACONTECE AQUI */
+.swiper-slide img,
+.swiper-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre o espaço sem distorcer a imagem/vídeo */
+}
+
 
 .slide-caption {
     position: absolute;
