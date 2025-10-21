@@ -63,6 +63,7 @@ if (locationsContainer && modal) {
     });
 }
 
+
 // --- PLEXUS ANIMATION ---
 function createPlexusAnimation(canvasId) {
     const canvas = document.getElementById(canvasId);
@@ -133,3 +134,21 @@ function createPlexusAnimation(canvasId) {
 
 createPlexusAnimation('plexus-canvas');
 createPlexusAnimation('plexus-canvas-footer');
+
+// --- SWIPER CAROUSEL ---
+const swiper = new Swiper('.media-carousel', {
+    loop: true,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
