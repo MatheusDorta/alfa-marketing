@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -135,8 +137,66 @@
                             </div>
                         </div>
                     </div>
-                    <div class="lg:w-1/2">
-                         <img src="https://raw.githubusercontent.com/MatheusDorta/alfa-marketing/main/videos_e_fotos/restaurante%20panorama.jpg" alt="" class="rounded-lg shadow-2xl border-4 border-gray-700">
+                    <div class="lg:w-1/2 w-full">
+                        <!-- Swiper -->
+                        <div class="swiper-container media-carousel rounded-lg shadow-2xl border-4 border-gray-700">
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <video src="https://raw.githubusercontent.com/MatheusDorta/alfa-marketing/main/videos_e_fotos/schoor.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline></video>
+                                    <div class="slide-caption">Supermercado Schorr</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://raw.githubusercontent.com/MatheusDorta/alfa-marketing/main/videos_e_fotos/restaurante%20panorama.jpg" alt="" class="w-full h-full object-cover" />
+                                    <div class="slide-caption">Restaurante Panorama</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://raw.githubusercontent.com/MatheusDorta/alfa-marketing/main/videos_e_fotos/alena.jpg" alt="[Mídia indoor no Instituto Alena]" class="w-full h-full object-cover" />
+                                    <div class="slide-caption">Instituto Alena</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://raw.githubusercontent.com/MatheusDorta/alfa-marketing/main/videos_e_fotos/aroma.jpg" alt="[Mídia indoor no Restaurante Aroma]" class="w-full h-full object-cover" />
+                                    <div class="slide-caption">Restaurante Aroma</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://raw.githubusercontent.com/MatheusDorta/alfa-marketing/main/videos_e_fotos/auto%20escola%20mais.jpg" alt="[Mídia indoor na Auto Escola Mais]" class="w-full h-full object-cover" />
+                                    <div class="slide-caption">Auto Escola Mais</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://raw.githubusercontent.com/MatheusDorta/alfa-marketing/main/videos_e_fotos/la%20casa%20da%20barba.jpg" alt="[Mídia indoor na La Casa da Barba]" class="w-full h-full object-cover" />
+                                    <div class="slide-caption">La Casa da Barba</div>
+                                </div>
+                                 <div class="swiper-slide">
+                                    <img src="https://raw.githubusercontent.com/MatheusDorta/alfa-marketing/main/videos_e_fotos/lot%C3%A9rica%20industrial.jpg" alt="[Mídia indoor na Lotérica Industrial]" class="w-full h-full object-cover" />
+                                    <div class="slide-caption">Lotérica Industrial</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://raw.githubusercontent.com/MatheusDorta/alfa-marketing/main/videos_e_fotos/lot%C3%A9rica%20panorama.jpg" alt="[Mídia indoor na Lotérica Panorama]" class="w-full h-full object-cover" />
+                                    <div class="slide-caption">Lotérica Panorama</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://raw.githubusercontent.com/MatheusDorta/alfa-marketing/main/videos_e_fotos/maria%20panela.jpg" alt="[Mídia indoor no Restaurante Maria Panela]" class="w-full h-full object-cover" />
+                                    <div class="slide-caption">Restaurante Maria Panela</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://raw.githubusercontent.com/MatheusDorta/alfa-marketing/main/videos_e_fotos/neolab%20centro.jpg" alt="[Mídia indoor no Neolab Centro]" class="w-full h-full object-cover" />
+                                    <div class="slide-caption">Neolab Centro</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://raw.githubusercontent.com/MatheusDorta/alfa-marketing/main/videos_e_fotos/neolab.jpg" alt="[Mídia indoor no Neolab]" class="w-full h-full object-cover" />
+                                    <div class="slide-caption">Neolab</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://raw.githubusercontent.com/MatheusDorta/alfa-marketing/main/videos_e_fotos/schorr.jpg" alt="[Mídia indoor no Supermercado Schorr]" class="w-full h-full object-cover" />
+                                    <div class="slide-caption">Supermercado Schorr</div>
+                                </div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- Add Navigation -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -303,7 +363,8 @@
         </div>
     </div>
 
-
+    <!-- SwiperJS JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js" defer></script>
 </body>
 </html>
