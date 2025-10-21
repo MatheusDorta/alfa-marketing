@@ -133,4 +133,3 @@ function createPlexusAnimation(canvasId) {
 
 createPlexusAnimation('plexus-canvas');
 createPlexusAnimation('plexus-canvas-footer');
-
