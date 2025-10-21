@@ -74,3 +74,61 @@ body {
     box-shadow: 0 10px 20px -5px rgba(34, 197, 94, 0.4);
 }
 
+/* Swiper Carousel Styles */
+.media-carousel {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Mantém proporção de vídeo */
+    position: relative;
+}
+
+.swiper-slide {
+    position: relative;
+    background-color: #111827;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 20px 10px 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    transition: background-color 0.3s ease;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #3b82f6;
+}
+
