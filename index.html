@@ -13,33 +13,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-900 text-gray-200">
 
     <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-gray-900/80 backdrop-blur-sm shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-gray-900">
-                <span class="text-blue-600">Alfa</span> Marketing Local
+            <h1 class="text-2xl font-bold text-white">
+                <span class="text-blue-500">ALFA</span> MKT LOCAL
             </h1>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#servicos" class="text-gray-600 hover:text-blue-600">Serviços</a>
-                <a href="#locais" class="text-gray-600 hover:text-blue-600">Nossos Pontos</a>
-                <a href="#planos" class="text-gray-600 hover:text-blue-600">Planos</a>
-                <a href="#contato" class="text-gray-600 hover:text-blue-600">Contato</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#servicos" class="text-gray-300 hover:text-blue-500 transition-colors">Serviços</a>
+                <a href="#locais" class="text-gray-300 hover:text-blue-500 transition-colors">Nossos Pontos</a>
+                <a href="#parcerias" class="text-gray-300 hover:text-blue-500 transition-colors">Parcerias</a>
+                <a href="#planos" class="text-gray-300 hover:text-blue-500 transition-colors">Planos</a>
+                <a href="#contato" class="text-gray-300 hover:text-blue-500 transition-colors">Contato</a>
             </nav>
-            <a href="#contato" class="hidden md:inline-block bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+            <a href="#contato" class="hidden md:inline-block bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
                 Anuncie Agora
             </a>
-            <button id="mobile-menu-button" class="md:hidden">
+            <button id="mobile-menu-button" class="md:hidden text-white">
                 <i data-lucide="menu"></i>
             </button>
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-             <a href="#servicos" class="block py-2 text-gray-600 hover:text-blue-600">Serviços</a>
-             <a href="#locais" class="block py-2 text-gray-600 hover:text-blue-600">Nossos Pontos</a>
-             <a href="#planos" class="block py-2 text-gray-600 hover:text-blue-600">Planos</a>
-             <a href="#contato" class="block py-2 text-gray-600 hover:text-blue-600">Contato</a>
+             <a href="#servicos" class="block py-2 text-gray-300 hover:text-blue-500">Serviços</a>
+             <a href="#locais" class="block py-2 text-gray-300 hover:text-blue-500">Nossos Pontos</a>
+             <a href="#parcerias" class="block py-2 text-gray-300 hover:text-blue-500">Parcerias</a>
+             <a href="#planos" class="block py-2 text-gray-300 hover:text-blue-500">Planos</a>
+             <a href="#contato" class="block py-2 text-gray-300 hover:text-blue-500">Contato</a>
              <a href="#contato" class="mt-4 block bg-blue-600 text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                 Anuncie Agora
             </a>
@@ -48,11 +50,12 @@
 
     <!-- Hero Section -->
     <main>
-        <section class="hero-bg text-white animated-bg">
+        <section class="hero-bg text-white relative overflow-hidden">
+            <canvas id="plexus-canvas" class="absolute top-0 left-0 w-full h-full z-0"></canvas>
             <div class="container mx-auto px-6 py-24 md:py-32 text-center relative z-10">
-                <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Conecte sua Marca com Toledo.</h2>
+                <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 tracking-tight">Conecte sua Marca com Toledo.</h2>
                 <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">Anuncie onde seus clientes realmente estão. Mídia indoor em pontos estratégicos da cidade para máxima visibilidade e resultados para o seu negócio.</p>
-                <a href="#contato" class="cta-button bg-blue-600 text-white font-bold px-8 py-4 rounded-lg text-lg inline-block">
+                <a href="#contato" class="cta-button bg-blue-600 text-white font-bold px-8 py-4 rounded-lg text-lg inline-block shadow-lg shadow-blue-500/30">
                     Quero Anunciar e Vender Mais
                 </a>
                 <p class="mt-4 text-sm text-gray-400">Fale com um especialista agora mesmo!</p>
@@ -60,40 +63,40 @@
         </section>
 
         <!-- Diferenciais Section -->
-        <section class="py-16 md:py-24 bg-white">
+        <section class="py-16 md:py-24 bg-gray-800">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                     <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Por que Anunciar com a Alfa?</h3>
-                     <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Vantagens que só a publicidade local mais inteligente de Toledo pode oferecer.</p>
+                     <h3 class="text-3xl md:text-4xl font-bold text-white">Por que Anunciar com a Alfa?</h3>
+                     <p class="text-gray-400 mt-2 max-w-2xl mx-auto">Vantagens que só a publicidade local mais inteligente de Toledo pode oferecer.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="text-center p-6 bg-gray-50 rounded-lg">
-                        <div class="bg-blue-100 text-blue-600 rounded-full p-3 inline-block mb-4">
+                    <div class="text-center p-6 bg-gray-900 rounded-lg border border-gray-700 feature-card">
+                        <div class="bg-blue-500/10 text-blue-500 rounded-full p-3 inline-block mb-4">
                             <i data-lucide="map-pin"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2">Foco 100% Local</h4>
-                        <p class="text-gray-600">Fale diretamente com o público da sua cidade, aumentando a relevância da sua mensagem.</p>
+                        <h4 class="text-xl font-semibold mb-2 text-white">Foco 100% Local</h4>
+                        <p class="text-gray-400">Fale diretamente com o público da sua cidade, aumentando a relevância da sua mensagem.</p>
                     </div>
-                    <div class="text-center p-6 bg-gray-50 rounded-lg">
-                        <div class="bg-blue-100 text-blue-600 rounded-full p-3 inline-block mb-4">
+                    <div class="text-center p-6 bg-gray-900 rounded-lg border border-gray-700 feature-card">
+                        <div class="bg-blue-500/10 text-blue-500 rounded-full p-3 inline-block mb-4">
                             <i data-lucide="dollar-sign"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2">Custo-Benefício Superior</h4>
-                        <p class="text-gray-600">Invista em uma mídia de alto impacto com um valor muito mais acessível que as mídias tradicionais.</p>
+                        <h4 class="text-xl font-semibold mb-2 text-white">Custo-Benefício Superior</h4>
+                        <p class="text-gray-400">Invista em uma mídia de alto impacto com um valor muito mais acessível que as mídias tradicionais.</p>
                     </div>
-                    <div class="text-center p-6 bg-gray-50 rounded-lg">
-                        <div class="bg-blue-100 text-blue-600 rounded-full p-3 inline-block mb-4">
+                    <div class="text-center p-6 bg-gray-900 rounded-lg border border-gray-700 feature-card">
+                        <div class="bg-blue-500/10 text-blue-500 rounded-full p-3 inline-block mb-4">
                             <i data-lucide="eye"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2">Alcance Garantido</h4>
-                        <p class="text-gray-600">Sua marca exibida diariamente, em loop, para milhares de pessoas em locais de grande circulação.</p>
+                        <h4 class="text-xl font-semibold mb-2 text-white">Alcance Garantido</h4>
+                        <p class="text-gray-400">Sua marca exibida diariamente, em loop, para milhares de pessoas em locais de grande circulação.</p>
                     </div>
-                    <div class="text-center p-6 bg-gray-50 rounded-lg">
-                        <div class="bg-blue-100 text-blue-600 rounded-full p-3 inline-block mb-4">
+                    <div class="text-center p-6 bg-gray-900 rounded-lg border border-gray-700 feature-card">
+                        <div class="bg-blue-500/10 text-blue-500 rounded-full p-3 inline-block mb-4">
                             <i data-lucide="settings"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2">Gestão Completa</h4>
-                        <p class="text-gray-600">Cuidamos de tudo: da criação e atualização do seu vídeo até a gestão das exibições.</p>
+                        <h4 class="text-xl font-semibold mb-2 text-white">Gestão Completa</h4>
+                        <p class="text-gray-400">Cuidamos de tudo: da criação e atualização do seu vídeo até a gestão das exibições.</p>
                     </div>
                 </div>
             </div>
@@ -101,53 +104,95 @@
 
 
         <!-- Sobre a Empresa / Serviços -->
-        <section id="servicos" class="py-16 md:py-24">
+        <section id="servicos" class="py-16 md:py-24 bg-gray-900">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col lg:flex-row items-center gap-12">
                     <div class="lg:w-1/2">
-                        <span class="text-blue-600 font-semibold">NOSSA ESPECIALIDADE</span>
-                        <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Muito Além das Telas: Presença Digital Completa</h3>
-                        <p class="text-gray-600 mb-6">A Alfa Marketing Local nasceu para fortalecer negócios em Toledo. Nossa missão é conectar sua marca a consumidores próximos, usando a mídia indoor como um poderoso ponto de contato, mas integrando sua presença no ambiente físico e digital para gerar lembrança de marca e impulsionar suas vendas.</p>
+                        <span class="text-blue-500 font-semibold">NOSSA ESPECIALIDADE</span>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">Muito Além das Telas: Presença Digital Completa</h3>
+                        <p class="text-gray-400 mb-6">A Alfa Marketing Local nasceu para fortalecer negócios em Toledo. Nossa missão é conectar sua marca a consumidores próximos, usando a mídia indoor como um poderoso ponto de contato, mas integrando sua presença no ambiente físico e digital para gerar lembrança de marca e impulsionar suas vendas.</p>
                          <div class="space-y-4">
                             <div class="flex items-start">
                                 <i data-lucide="check-circle-2" class="text-green-500 mr-3 mt-1 flex-shrink-0"></i>
                                 <div>
-                                    <h4 class="font-semibold">Mídia Indoor Estratégica</h4>
-                                    <p class="text-gray-500">TVs de até 55" em locais de espera e atendimento com alto fluxo de pessoas.</p>
+                                    <h4 class="font-semibold text-white">Mídia Indoor Estratégica</h4>
+                                    <p class="text-gray-400">TVs de até 55" em locais de espera e atendimento com alto fluxo de pessoas.</p>
                                 </div>
                             </div>
                              <div class="flex items-start">
                                 <i data-lucide="check-circle-2" class="text-green-500 mr-3 mt-1 flex-shrink-0"></i>
                                 <div>
-                                    <h4 class="font-semibold">Presença Digital Otimizada</h4>
-                                    <p class="text-gray-500">Gestão de Google Meu Negócio, SEO Local e Tráfego Pago para você ser encontrado.</p>
+                                    <h4 class="font-semibold text-white">Presença Digital Otimizada</h4>
+                                    <p class="text-gray-400">Gestão de Google Meu Negócio, SEO Local e Tráfego Pago para você ser encontrado.</p>
                                 </div>
                             </div>
                              <div class="flex items-start">
                                 <i data-lucide="check-circle-2" class="text-green-500 mr-3 mt-1 flex-shrink-0"></i>
                                 <div>
-                                    <h4 class="font-semibold">Produção de Conteúdo</h4>
-                                    <p class="text-gray-500">Criamos vídeos de até 30 segundos e outros materiais para suas campanhas.</p>
+                                    <h4 class="font-semibold text-white">Produção de Conteúdo</h4>
+                                    <p class="text-gray-400">Criamos vídeos de até 30 segundos e outros materiais para suas campanhas.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="lg:w-1/2">
-                         <img src="https://placehold.co/600x450/3B82F6/FFFFFF?text=Alfa+M%C3%ADdia+Indoor" alt="" class="rounded-lg shadow-2xl">
+                         <img src="https://placehold.co/600x450/111827/3B82F6?text=Alfa+M%C3%ADdia+Indoor" alt="" class="rounded-lg shadow-2xl border-4 border-gray-700">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Locais -->
-        <section id="locais" class="py-16 md:py-24 bg-white">
+        <section id="locais" class="py-16 md:py-24 bg-gray-800">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                     <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Onde Seus Clientes Vão Te Ver</h3>
-                     <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Nossa rede de parceiros conta com 15 pontos de alta visibilidade em Toledo e está em constante expansão.</p>
+                     <h3 class="text-3xl md:text-4xl font-bold text-white">Onde Seus Clientes Vão Te Ver</h3>
+                     <p class="text-gray-400 mt-2 max-w-2xl mx-auto">Nossa rede de parceiros conta com 15 pontos de alta visibilidade em Toledo. Clique para ver o endereço.</p>
                 </div>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center">
+                <div id="locations-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 text-center">
                     <!-- Lista de locais será inserida aqui dinamicamente -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Parcerias -->
+        <section id="parcerias" class="py-16 md:py-24 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                     <h3 class="text-3xl md:text-4xl font-bold text-white">Seja um Ponto Alfa!</h3>
+                     <p class="text-gray-400 mt-2 max-w-3xl mx-auto">Transforme seu estabelecimento em um ponto de mídia, gere receita e ganhe visibilidade em nossa rede.</p>
+                </div>
+                <div class="flex flex-col lg:flex-row items-center gap-12 bg-gray-800 p-8 rounded-lg border border-gray-700">
+                    <div class="lg:w-1/2">
+                        <h4 class="text-2xl font-bold text-white mb-4">Vantagens Exclusivas para Parceiros</h4>
+                        <p class="text-gray-400 mb-6">Ao instalar uma de nossas telas, você moderniza seu ambiente e ainda tem a chance de divulgar sua própria marca em outros pontos da cidade como permuta.</p>
+                         <ul class="space-y-3">
+                            <li class="flex items-center"><i data-lucide="check-circle" class="text-blue-500 mr-2"></i><span>Modernize seu ambiente sem custos.</span></li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="text-blue-500 mr-2"></i><span>Divulgue suas promoções na sua própria tela.</span></li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="text-blue-500 mr-2"></i><span>Ganhe visibilidade anunciando em outros pontos.</span></li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="text-blue-500 mr-2"></i><span>Faça parte de uma rede de negócios local forte.</span></li>
+                        </ul>
+                    </div>
+                    <div class="lg:w-1/2 w-full">
+                         <form class="bg-gray-900 p-8 rounded-lg w-full">
+                             <h4 class="text-xl font-semibold text-white mb-4 text-center">Quero ser um parceiro!</h4>
+                            <div class="mb-4">
+                                <label for="partner-name" class="block text-sm font-medium text-gray-400 mb-1">Seu Nome</label>
+                                <input type="text" id="partner-name" name="partner-name" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:ring-blue-500 focus:border-blue-500 text-white" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="partner-business" class="block text-sm font-medium text-gray-400 mb-1">Nome do Estabelecimento</label>
+                                <input type="text" id="partner-business" name="partner-business" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:ring-blue-500 focus:border-blue-500 text-white" required>
+                            </div>
+                             <div class="mb-4">
+                                <label for="partner-phone" class="block text-sm font-medium text-gray-400 mb-1">Telefone / WhatsApp</label>
+                                <input type="tel" id="partner-phone" name="partner-phone" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:ring-blue-500 focus:border-blue-500 text-white" required>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-md hover:bg-blue-700 transition-colors">
+                                Enviar Interesse
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -157,44 +202,45 @@
         <section id="planos" class="py-16 md:py-24">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                     <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Planos Flexíveis para o Seu Negócio</h3>
-                     <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Escolha a opção que melhor se encaixa na sua estratégia e orçamento.</p>
+                     <h3 class="text-3xl md:text-4xl font-bold text-white">Planos Flexíveis para o Seu Negócio</h3>
+                     <p class="text-gray-400 mt-2 max-w-2xl mx-auto">Escolha a opção que melhor se encaixa na sua estratégia e orçamento.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Plano Individual -->
-                    <div class="plan-card border rounded-lg p-8 text-center bg-white">
-                        <h4 class="text-xl font-bold mb-2">Plano Individual</h4>
-                        <p class="text-gray-500 mb-6">Ideal para testar ou focar em um ponto específico.</p>
-                        <p class="text-5xl font-extrabold mb-2">R$ 100<span class="text-lg font-medium text-gray-500">/mês</span></p>
-                        <p class="text-gray-600 mb-6">Exibição em 1 ponto à sua escolha.</p>
-                        <a href="#contato" class="w-full inline-block bg-gray-200 text-gray-800 font-semibold py-3 rounded-lg hover:bg-gray-300 transition-colors">Quero Este Plano</a>
+                    <div class="plan-card border border-gray-700 rounded-lg p-8 text-center bg-gray-800">
+                        <h4 class="text-xl font-bold mb-2 text-white">Plano Individual</h4>
+                        <p class="text-gray-400 mb-6">Ideal para testar ou focar em um ponto específico.</p>
+                        <p class="text-5xl font-extrabold mb-2 text-white">R$ 100<span class="text-lg font-medium text-gray-400">/mês</span></p>
+                        <p class="text-gray-400 mb-6">Exibição em 1 ponto à sua escolha.</p>
+                        <a href="#contato" class="w-full inline-block bg-gray-700 text-white font-semibold py-3 rounded-lg hover:bg-gray-600 transition-colors">Quero Este Plano</a>
                     </div>
 
                     <!-- Plano Pacote 4+ -->
-                    <div class="plan-card border-2 border-blue-600 rounded-lg p-8 text-center bg-white relative">
-                         <span class="absolute top-0 -translate-y-1/2 bg-blue-600 text-white text-sm font-bold px-3 py-1 rounded-full">MAIS POPULAR</span>
-                        <h4 class="text-xl font-bold text-blue-600 mb-2">Pacote 4+</h4>
-                        <p class="text-gray-500 mb-6">Amplie seu alcance com um ótimo custo-benefício.</p>
-                        <p class="text-5xl font-extrabold mb-2">R$ 75<span class="text-lg font-medium text-gray-500">/mês por tela</span></p>
-                        <p class="text-gray-600 mb-6">Exibição a partir de 4 telas.</p>
+                    <div class="plan-card border-2 border-blue-500 rounded-lg p-8 text-center bg-gray-800 relative shadow-2xl shadow-blue-500/20">
+                         <span class="absolute top-0 -translate-y-1/2 bg-blue-500 text-white text-sm font-bold px-3 py-1 rounded-full">MAIS POPULAR</span>
+                        <h4 class="text-xl font-bold text-blue-500 mb-2">Pacote 4+</h4>
+                        <p class="text-gray-400 mb-6">Amplie seu alcance com um ótimo custo-benefício.</p>
+                        <p class="text-5xl font-extrabold mb-2 text-white">R$ 75<span class="text-lg font-medium text-gray-400">/mês por tela</span></p>
+                        <p class="text-gray-400 mb-6">Exibição a partir de 4 telas.</p>
                         <a href="#contato" class="w-full inline-block bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-colors">Quero Este Plano</a>
                     </div>
 
                     <!-- Plano Pacote 10+ -->
-                    <div class="plan-card border rounded-lg p-8 text-center bg-white">
-                        <h4 class="text-xl font-bold mb-2">Plano 10+</h4>
-                        <p class="text-gray-500 mb-6">Máxima cobertura e exposição de marca na cidade.</p>
-                        <p class="text-5xl font-extrabold mb-2">R$ 50<span class="text-lg font-medium text-gray-500">/mês por tela</span></p>
-                        <p class="text-gray-600 mb-6">Exibição a partir de 10 telas.</p>
-                        <a href="#contato" class="w-full inline-block bg-gray-200 text-gray-800 font-semibold py-3 rounded-lg hover:bg-gray-300 transition-colors">Quero Este Plano</a>
+                    <div class="plan-card border border-gray-700 rounded-lg p-8 text-center bg-gray-800">
+                        <h4 class="text-xl font-bold mb-2 text-white">Pacote 10+</h4>
+                        <p class="text-gray-400 mb-6">Máxima cobertura e exposição de marca na cidade.</p>
+                        <p class="text-5xl font-extrabold mb-2 text-white">R$ 50<span class="text-lg font-medium text-gray-400">/mês por tela</span></p>
+                        <p class="text-gray-400 mb-6">Exibição a partir de 10 telas.</p>
+                        <a href="#contato" class="w-full inline-block bg-gray-700 text-white font-semibold py-3 rounded-lg hover:bg-gray-600 transition-colors">Quero Este Plano</a>
                     </div>
                 </div>
-                 <p class="text-center mt-8 text-gray-500">Todos os planos incluem vídeo de até 30s, 4+ exibições por hora e atualização mensal.</p>
+                 <p class="text-center mt-8 text-gray-400">Todos os planos incluem vídeo de até 30s, 4+ exibições por hora e atualização mensal.</p>
             </div>
         </section>
 
         <!-- Contato / Formulário -->
-        <section id="contato" class="py-16 md:py-24 bg-gray-800 text-white animated-bg">
+        <section id="contato" class="py-16 md:py-24 bg-gray-900 text-white relative overflow-hidden">
+             <canvas id="plexus-canvas-footer" class="absolute top-0 left-0 w-full h-full z-0"></canvas>
             <div class="container mx-auto px-6 relative z-10">
                 <div class="flex flex-col lg:flex-row items-center gap-12">
                     <div class="lg:w-1/2 text-center lg:text-left">
@@ -203,7 +249,7 @@
                         <div class="space-y-4 text-left inline-block">
                              <div class="flex items-center">
                                 <i data-lucide="phone" class="text-blue-400 mr-3"></i>
-                                <span>(45) 99999-8888</span>
+                                <span>(45) 99994-2487</span>
                             </div>
                             <div class="flex items-center">
                                 <i data-lucide="mail" class="text-blue-400 mr-3"></i>
@@ -216,22 +262,19 @@
                         </div>
                     </div>
                     <div class="lg:w-1/2 w-full">
-                        <form class="bg-white p-8 rounded-lg shadow-lg text-gray-800 w-full">
+                        <form class="bg-gray-800 p-8 rounded-lg shadow-lg w-full border border-gray-700">
+                             <h4 class="text-xl font-semibold text-white mb-4 text-center">Solicite um Orçamento</h4>
                             <div class="mb-4">
-                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Seu Nome</label>
-                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="João da Silva" required>
+                                <label for="name" class="block text-sm font-medium text-gray-400 mb-1">Seu Nome</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:ring-blue-500 focus:border-blue-500 text-white" placeholder="João da Silva" required>
                             </div>
                              <div class="mb-4">
-                                <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Nome da Empresa</label>
-                                <input type="text" id="company" name="company" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Minha Empresa LTDA" required>
+                                <label for="company" class="block text-sm font-medium text-gray-400 mb-1">Nome da Empresa</label>
+                                <input type="text" id="company" name="company" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:ring-blue-500 focus:border-blue-500 text-white" placeholder="Minha Empresa LTDA" required>
                             </div>
                              <div class="mb-4">
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
-                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="seu@email.com" required>
-                            </div>
-                             <div class="mb-4">
-                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefone / WhatsApp</label>
-                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="(45) 99999-8888" required>
+                                <label for="phone" class="block text-sm font-medium text-gray-400 mb-1">Telefone / WhatsApp</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:ring-blue-500 focus:border-blue-500 text-white" placeholder="(45) 99994-2487" required>
                             </div>
                             <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-md hover:bg-blue-700 transition-colors">
                                 Solicitar Orçamento Gratuito
@@ -244,12 +287,27 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white">
+    <footer class="bg-gray-900 text-white border-t border-gray-800">
         <div class="container mx-auto px-6 py-8 text-center">
             <p>&copy; 2025 Alfa Marketing Local. Todos os direitos reservados.</p>
-            <p class="text-gray-400 text-sm mt-1">Fortalecendo o comércio de Toledo, PR.</p>
+            <p class="text-gray-500 text-sm mt-1">Fortalecendo o comércio de Toledo, PR.</p>
         </div>
     </footer>
+    
+    <!-- Location Modal -->
+    <div id="location-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 z-[100] hidden">
+        <div id="location-modal-content" class="bg-gray-800 p-8 rounded-lg shadow-2xl max-w-sm w-full text-center relative transform transition-all duration-300 scale-95 opacity-0">
+            <button id="close-modal-button" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i data-lucide="x"></i>
+            </button>
+            <h3 id="modal-location-name" class="text-2xl font-bold text-white mb-4">Nome do Local</h3>
+            <p id="modal-location-address" class="text-gray-300 mb-6">Endereço completo aqui.</p>
+            <a id="modal-gmaps-link" href="#" target="_blank" class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center">
+                <i data-lucide="map-pin" class="mr-2"></i> Ver no Google Maps
+            </a>
+        </div>
+    </div>
+
 
     <script src="script.js" defer></script>
 </body>
