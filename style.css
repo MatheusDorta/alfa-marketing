@@ -1,58 +1,67 @@
 body {
     font-family: 'Inter', sans-serif;
+    background-color: #111827; /* bg-gray-900 */
 }
-
-.animated-bg {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.animated-bg::before {
-    content: '';
-    position: absolute;
-    width: 3000px;
-    height: 3000px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-image:
-        radial-gradient(circle, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-        radial-gradient(circle, rgba(59, 130, 246, 0.08) 1px, transparent 1px);
-    background-size: 60px 60px, 180px 180px;
-    background-position: 0 0, 90px 90px;
-    animation: moveDots 200s linear infinite;
-    z-index: -1;
-}
-
-@keyframes moveDots {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
 
 .hero-bg {
-    background-color: #111827;
+    background: linear-gradient(180deg, #111827 0%, #1f2937 100%);
 }
+
+#plexus-canvas, #plexus-canvas-footer {
+    filter: brightness(0.7);
+}
+
 
 .cta-button {
     transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3), 0 4px 6px -2px rgba(59, 130, 246, 0.2);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.4);
+}
+
+.feature-card {
+    transition: all 0.3s ease;
+    border-color: #374151; /* border-gray-700 */
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: #3b82f6; /* border-blue-500 */
+    box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.1);
 }
 
 .plan-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .plan-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+    border-color: #3b82f6;
 }
+
+/* Location Item Styling */
+.location-item {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: #1f2937; /* bg-gray-800 */
+    border: 1px solid #374151; /* border-gray-700 */
+}
+
+.location-item:hover {
+    transform: translateY(-4px);
+    background-color: #374151; /* bg-gray-700 */
+    border-color: #3b82f6; /* border-blue-500 */
+}
+
+/* Modal Styling */
+#location-modal.active {
+    display: flex;
+}
+#location-modal.active #location-modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
