@@ -77,9 +77,11 @@ body {
 /* Swiper Carousel Styles -- CORRIGIDO */
 .media-carousel {
     width: 100%;
-    height: 450px; /* Altura fixa para consistência */
+    max-width: 100%;
+    height: 350px;
     position: relative;
     background-color: #111827;
+    overflow: hidden;
 }
 
 .swiper-slide {
@@ -90,15 +92,16 @@ body {
     align-items: center;
     color: white;
     font-size: 24px;
-    overflow: hidden; /* Garante que a imagem não vaze */
+    overflow: hidden;
+    height: 350px;
 }
 
-/* A MÁGICA ACONTECE AQUI */
 .swiper-slide img,
 .swiper-slide video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cobre o espaço sem distorcer a imagem/vídeo */
+    object-fit: contain;
+    max-height: 350px;
 }
 
 
